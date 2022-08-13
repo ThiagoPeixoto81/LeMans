@@ -244,7 +244,7 @@ const winners = [
         name: "McLaren F1 GTR",
         drivers: "Yannick Dalmas<br>JJ Lehto<br>Masanori Sekiya",
         img_src: "/assets/cars/mclarenf1gtr.png",
-        con_src: "/assets/logos/mclaren.png"
+        con_src: "/assets/logos/Mclaren.png"
     },
 
     {
