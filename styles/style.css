@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --backgroundColor: #f9f7f5;
+    --primaryColor: #002f6b;
+    --secondaryColor: #125ab8;
+    --fontColor: #ffffff;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Poppins;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--backgroundColor);
+}
+
+nav{
+    background-color: var(--primaryColor);
+
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+nav img{
+    width: 50px;
+    height: auto;
+}
+
+nav h2{
+    font-size: 3.5rem;
+    color: var(--fontColor);
+    font-weight: 400;
+    font-style: italic;
+
+    margin-right: 0.8%;
+}
+
+.container{
+   width: 100%;
+   max-width: 960px;
+   margin: auto;
+   text-align: center;
+}
+
+.info-section{
+    text-align: center;
+    display: none;
+}
+
+.on{
+
+    padding: 2% 2% 0 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: var(--secondaryColor);
+}
+
+.on .info-table{
+    margin-bottom:1% ;
+    padding: 1%;
+
+    border: var(--fontColor) solid 2px;
+    border-radius: 1.6em;
+
+    color: var(--fontColor);
+    text-align: left;
+
+    width: 20%;
+    height: auto;
+
+}
+
+.on .info-table h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.on .info-table p{
+    font-size: 1.2rem;
+    margin-bottom: 3%;
+
+    border-bottom: solid 1px var(--fontColor);
+}
+
+.on .info-table .logo-img{
+    margin: 2%;
+
+    width: 25%;
+    height: auto;
+}
+
+.on .car-image{
+    width: 40%;
+    height: auto;
+}
+
+.on .car-image img{
+    width: 100%;
+    height: auto;
+    
+}
+
+.year-section{
+    margin: 3%;
+    padding: 0 1% 2% 1%;
+
+    border: #002f6b solid 2px;
+    border-radius: 1.6em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.year-section .year-info{
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+
+    margin: 1.2%;
+}
+
+.year-section .year-btn{
+    width: 60px;
+    height: 60px;
+    padding: 1%;
+
+    background-color: var(--primaryColor);
+
+    border: none;
+    border-radius: 50%;
+
+    color: var(--fontColor);
+    font-size: 1.6rem;
+    font-family: Poppins;
+    font-weight: 600;
+
+    transition: background 0.8s;
+
+}
+
+.year-section .year-btn:hover{
+    cursor: pointer;
+    background-color: var(--backgroundColor);
+
+    border: var(--primaryColor) solid 2px;
+
+    color: var(--primaryColor);
+}
+
+.year-section .first-row,
+.year-section .second-row{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.year-section .first-row{
+    margin-bottom: 2%;
+}
+
+.year-section .twentys-row{
+    width: 30%;
+}
+
+
+@media (max-width: 660px){
+    html{
+        font-size: 62%;
+    }
+
+    .on{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .on .info-table{
+        order: -1;
+        width: 80%;
+        margin-bottom: 2%;
+    }
+
+    .on .info-table .logo-img{
+        margin: 2%;
+    
+        width: 10%;
+        height: auto;
+    }
+
+    .on .car-image{
+        width: 60%;
+    }
+
+    .year-section .first-row,
+    .year-section .second-row{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .year-section .twentys-row{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 414px){
+    html{
+        font-size: 62%;
+    }
+
+    .on{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .on .info-table{
+        order: -1;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .year-section .year-btn{
+        width: 40px;
+        height: 40px;
+        padding: 1%;
+    
+        background-color: var(--primaryColor);
+    
+        border: none;
+        border-radius: 50%;
+    
+        color: var(--fontColor);
+        font-size: 1.2rem;
+        font-family: Poppins;
+        font-weight: 600;
+    
+        transition: background 0.8s;
+    
+    }
+
+    .on .info-table .logo-img{
+        margin: 2%;
+    
+        width: 10%;
+        height: auto;
+    }
+
+    .on .car-image{
+        width: 60%;
+    }
+
+    .year-section .first-row,
+    .year-section .second-row{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .year-section .twentys-row{
+        width: 60%;
+    }
+
+}
