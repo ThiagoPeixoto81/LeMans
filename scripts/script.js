@@ -1,13 +1,8 @@
 //Pega os elementos
 let yearButton = document.querySelectorAll(".year-btn");
-let show = document.querySelector(".info-section")
-let car_image = document.querySelector(".carro-img")
-let year = document.querySelector(".year-info")
-let car_name = document.querySelector(".car-name")
-let team_name = document.querySelector(".team-name")
-let drivers_name = document.querySelector(".drivers-name")
-let logo = document.querySelector(".logo-img")
-
+let show = document.querySelector(".info-section");
+let car_image = document.querySelector(".carro-img");
+let info = document.querySelector(".info-text");
 //Pegando o JSON
 fetch("/scripts/winners.json")
     .then(res => res.json())
@@ -25,13 +20,13 @@ fetch("/scripts/winners.json")
                     for (let pos in lemans.winners) {
                         if (lemans.winners[pos].year == yearButton[i].dataset.year) {
 
-                            year.innerText = `${lemans.winners[pos].year}`;
-                            car_name.innerHTML = `<strong>CARRO - </strong>${lemans.winners[pos].name.toUpperCase()}`;
-                            team_name.innerHTML = `<strong>TIME - </strong>${lemans.winners[pos].constructors.toUpperCase()}`;
-                            drivers_name.innerHTML = `<strong>PILOTOS:</strong><br>${lemans.winners[pos].drivers.toUpperCase()}`;
+                            info.children[0].innerText = `${lemans.winners[pos].year}`;
+                            info.children[1].innerHTML = `<strong>CARRO - </strong>${lemans.winners[pos].name.toUpperCase()}`;
+                            info.children[2].innerHTML = `<strong>TIME - </strong>${lemans.winners[pos].constructors.toUpperCase()}`;
+                            info.children[3].innerHTML = `<strong>PILOTOS:</strong><br>${lemans.winners[pos].drivers.toUpperCase()}`;
 
                             car_image.src = `${lemans.winners[pos].img_src}`;
-                            logo.src = `${lemans.winners[pos].con_src}`;
+                            info.children[4].src = `${lemans.winners[pos].con_src}`;
 
                             show.classList.add("on");
                             lastcliked = yearButton[i].dataset.year;
