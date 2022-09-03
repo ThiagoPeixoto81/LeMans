@@ -10,9 +10,14 @@ fetch("/scripts/winners.json")
         // Ativação da div com as informações dos carros
         var lastcliked = 0;
         for (let i in yearButton) {
+            
+
             yearButton[i].addEventListener("click", () => {
+
                 if (yearButton[i].dataset.year == lastcliked) {
                     show.classList.remove("on")
+                    car_image.parentElement.classList.remove("animation")
+                    info.parentElement.classList.remove("animation")
                     lastcliked = 0;
 
                 } else {
@@ -28,7 +33,12 @@ fetch("/scripts/winners.json")
                             car_image.src = `${lemans.winners[pos].img_src}`;
                             info.children[4].src = `${lemans.winners[pos].con_src}`;
 
+                            car_image.parentElement.classList.add("animation")
+                            info.parentElement.classList.add("animation")
                             show.classList.add("on");
+
+                            
+                            window.scrollTo(0,0)
                             lastcliked = yearButton[i].dataset.year;
                         }
                     }
@@ -38,3 +48,4 @@ fetch("/scripts/winners.json")
             })
         }
     })
+

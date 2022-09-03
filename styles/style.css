@@ -10,6 +10,7 @@
 html{
     font-size: 62.5%;
     font-family: Poppins;
+    scroll-behavior: smooth;
 }
 
 *{
@@ -58,11 +59,10 @@ nav h2{
 }
 
 .on{
-
-    padding: 2% 2% 0 2%;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
+    padding: 2% 2% 0 2%;
     background-color: var(--secondaryColor);
 }
 
@@ -78,6 +78,17 @@ nav h2{
 
     width: 20%;
     height: auto;
+
+    opacity: 0;
+    transform: translateX(50px);
+
+}
+
+.on .info-table.animation{
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 
 }
 
@@ -103,6 +114,17 @@ nav h2{
 .on .car-image{
     width: 40%;
     height: auto;
+
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.on .car-image.animation{
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+
 }
 
 .on .car-image img{
@@ -174,7 +196,17 @@ nav h2{
     width: 30%;
 }
 
+/* Animations */
+@keyframes appear {
 
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Media queries */
 @media (max-width: 660px){
     html{
         font-size: 62%;
